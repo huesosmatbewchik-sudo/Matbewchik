@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rubik m';
+    src: url(../fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik r';
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+
+.container {
+    width: 1180px;
+    margin: auto;
+}
+
+.header {
+    height: 40px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-txt {
+    font-family: 'Rubik m';
+    font-size: 20px;
+    color: #333;
+    margin-left: 11.88px;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+}
+
+.header__search-txt {
+    width: 320px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px #333 solid;
+    color: #333;
+    background: transparent;
+    font-family: 'Rubik m';
+    font-size: 16px;
+}
+
+.header__search-txt::placeholder {
+    font-size: 16px;
+    color: #828282;
+    font-family: 'Rubik r';
+}
+
+.header__search-txt:focus {
+    outline: none;
+}
+
+.header__search-btn {
+    border: none;
+    font-size: 16px;
+    font-family: 'Rubik m';
+    color: #E5261E;
+    margin-left: 32px;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Rubik m';
+    font-size: 16px;
+    width: 113px;
+    height: 38px;
+    background-color: #E5261E;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-auth:hover {
+    background: #cc221b;
+}
+
+.nav {
+    margin: 44px auto 32px auto;
+    width: 311px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav__a {
+    font-family: 'Rubik m';
+    font-size: 28px;
+    color: #333333;
+    text-decoration: none;
+    padding-bottom: 9px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav__a--active,
+.nav__a:hover {
+    color: #E5261E;
+    border-bottom-color: #E5261E;
+}
+
+.new {
+    margin-bottom: 32px;
+}
+
+.new__caption {
+    font-family: 'Rubik r';
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: #333;
+}
+
+.movies {
+    display: flex;
+    justify-content: space-between;
+}
+
+.moveis__item {
+    position: relative;
+    width: 280px;
+}
+
+.moveis__item-img {
+    width: 280px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.moveis__item-p {
+    font-family: 'Rubik r';
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.new-item__desc {
+    width: 280px;
+    height: 370px;
+    background-color: rgba(51, 51, 51, 0.8);
+    font-size: 16px;
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 16px;
+    line-height: 140%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.moveis__item:hover .new-item__desc {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.genres {
+    margin-bottom: 32px;
+}
+
+.genres-gallary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.genres-gallary__item {
+    width: 280px;
+    height: 208px;
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.genres-gallary__item:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.comedy {
+    background: linear-gradient(127.83deg, #f2c94c 8.44%, #f29a4a 91.36%);
+}
+
+.drama {
+    background: linear-gradient(127.83deg, #f1a98c 0%, #e78686 100%);
+}
+
+.sci-fi {
+    background: linear-gradient(127.83deg, #56ccf2 0%, #2f80ed 100%);
+}
+
+.horror {
+    background: linear-gradient(127.83deg, #828282 0%, #4f4f4f 100%);
+}
+
+.genres-gallary__item-emj {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.genres-gallary__item-p {
+    font-family: 'Rubik r';
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.footer {
+    margin-top: 72px;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.footer__conteiner {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    width: 1180px;
+    margin: auto;
+}
+
+.footer__logo {
+    margin-right: 90px;
+}
+
+.footer__info-p {
+    font-family: 'Rubik r';
+    font-size: 14px;
+    color: #333;
+}
+
+.footer__info-p:nth-child(2) {
+    margin: 6px 0 10px 0;
+}
+
+.footer__info-a {
+    color: #1f4766;
+    font-family: 'Rubik r';
+    font-size: 14px;
+    text-decoration: none;
+}
+
+@media (max-width: 390px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .header__search {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header__search-txt {
+        width: 100%;
+    }
+
+    .header__search-btn {
+        margin-left: 16px;
+    }
+
+    .btn-auth {
+        width: 96px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .nav {
+        width: 100%;
+        max-width: 280px;
+        margin: 28px auto 24px auto;
+    }
+
+    .nav__a {
+        font-size: 22px;
+    }
+
+    .new__caption {
+        font-size: 20px;
+    }
+
+    .movies {
+        flex-wrap: wrap;
+        gap: 20px 12px;
+    }
+
+    .moveis__item {
+        width: calc(50% - 6px);
+    }
+
+    .moveis__item-img,
+    .new-item__desc {
+        width: 100%;
+        height: 240px;
+    }
+
+    .new-item__desc {
+        font-size: 13px;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .moveis__item-p {
+        font-size: 16px;
+    }
+
+    .genres-gallary {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .genres-gallary__item {
+        width: calc(50% - 6px);
+        height: 140px;
+    }
+
+    .genres-gallary__item-emj {
+        font-size: 36px;
+    }
+
+    .genres-gallary__item-p {
+        font-size: 16px;
+    }
+
+    .footer {
+        margin-top: 40px;
+    }
+
+    .footer__conteiner {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    .footer__logo {
+        margin-right: 0;
+    }
+}

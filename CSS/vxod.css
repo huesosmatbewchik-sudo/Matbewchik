@@ -1,0 +1,134 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.box {
+    background-color: #fff;
+    padding: 40px 50px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Rubik r';
+    font-size: 14px;
+    color: #828282;
+}
+
+.title {
+    font-family: 'Rubik m';
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.success {
+    color: #4caf50;
+}
+
+.text {
+    text-align: center;
+    font-family: 'Rubik r';
+    margin-bottom: 15px;
+}
+
+.field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-family: 'Rubik r';
+    font-size: 14px;
+    color: #828282;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #828282;
+    padding: 8px 0;
+    font-family: 'Rubik r';
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    background: transparent;
+}
+
+.btn {
+    background-color: #E5261E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 30px;
+    font-family: 'Rubik m';
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.field-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.field-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.field-checkbox label {
+    font-family: 'Rubik r', sans-serif;
+    font-size: 16px;
+    color: #111111;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.field-checkbox label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #111111;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.field-checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4.5px;
+    width: 8px;
+    height: 4.5px;
+    border-left: 2px solid #D91E18;
+    border-bottom: 2px solid #D91E18;
+    transform: rotate(-45deg);
+}

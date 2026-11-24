@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rubik m';
+    src: url(../fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Rubik r';
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+
+.container {
+    width: 1180px;
+    margin: auto;
+}
+
+.header {
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header__logo-txt {
+    font-family: 'Rubik m';
+    font-size: 20px;
+    color: #333;
+    margin-left: 11.88px;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+}
+
+.header__search-txt {
+    width: 320px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px #333 solid;
+    color: #333;
+    background: transparent;
+    font-family: 'Rubik m';
+    font-size: 16px;
+}
+
+.header__search-txt::placeholder {
+    font-size: 16px;
+    color: #828282;
+    font-family: 'Rubik r';
+}
+
+.header__search-txt:focus {
+    outline: none;
+}
+
+.header__search-btn {
+    border: none;
+    font-size: 16px;
+    font-family: 'Rubik m';
+    color: #E5261E;
+    margin-left: 32px;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-auth,
+.header__auth-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Rubik m';
+    font-size: 16px;
+    width: 113px;
+    height: 38px;
+    background-color: #E5261E;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-auth:hover,
+.header__auth-btn:hover {
+    background: #cc221b;
+}
+
+.nav {
+    margin: 44px auto 32px auto;
+    width: 311px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav__a {
+    font-family: 'Rubik m';
+    font-size: 28px;
+    color: #333333;
+    text-decoration: none;
+    padding-bottom: 9px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav__a--active,
+.nav__a:hover,
+.nav__a:active {
+    color: #E5261E;
+    border-bottom-color: #E5261E;
+}
+
+.shed {
+    margin-bottom: 20px;
+}
+
+.scroll {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f2f2f2;
+}
+
+.TV-cannel {
+    padding-top: 21px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+.first {
+    width: 100%;
+    min-height: 162px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+}
+
+.TV-cannel__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 30%;
+}
+
+.TV-cannel__logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.channel__info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.info__text {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    align-items: flex-start;
+}
+
+.info {
+    font-family: 'Rubik m';
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info__text p {
+    font-family: 'Rubik r';
+    font-size: 16px;
+    color: #333;
+}
+
+.TV-cannel__txt {
+    color: #E5261E;
+    font-family: 'Rubik m';
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+.footer__conteiner {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    width: 1180px;
+    margin: auto;
+}
+
+.footer__logo {
+    margin-right: 100px;
+}
+
+.footer__info-p {
+    font-family: 'Rubik r';
+    font-size: 14px;
+    color: #333;
+}
+
+.footer__info-p:nth-child(2) {
+    margin: 6px 0 10px 0;
+}
+
+.footer__info-a {
+    color: #1f4766;
+    font-family: 'Rubik r';
+    font-size: 14px;
+    text-decoration: none;
+}
+
+@media (max-width: 390px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .header__logo {
+        order: 1;
+    }
+
+    .header__logo-txt {
+        font-size: 20px;
+        margin-left: 11.88px;
+    }
+
+    .header__search {
+        order: 2;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header__search-txt {
+        order: 2;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .header__search-btn {
+        order: 3;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .btn-auth,
+    .header__auth-btn {
+        order: 4;
+        width: 113px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .nav {
+        width: 100%;
+        max-width: 260px;
+        margin: 28px auto 24px auto;
+    }
+
+    .nav__a {
+        font-size: 22px;
+        padding-bottom: 6px;
+    }
+
+    .shed {
+        margin-bottom: 16px;
+    }
+
+    .scroll {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+
+    .TV-cannel {
+        padding-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .first {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .TV-cannel__logo {
+        flex: none;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .TV-cannel__logo img {
+        max-height: 40px;
+    }
+
+    .channel__info {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .info {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .info__text {
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .info__text p {
+        font-size: 14px;
+        line-height: 135%;
+    }
+
+    .TV-cannel__txt {
+        flex-shrink: 0;
+    }
+
+    .footer {
+        margin-top: 36px;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }
+
+    .footer__conteiner {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    .footer__logo {
+        margin-right: 0;
+    }
+
+    .footer__info-p {
+        font-size: 13px;
+        line-height: 140%;
+    }
+}
